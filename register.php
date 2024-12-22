@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Register - AMNZ City Taxi</title>
+  <title>Register - QuickTrip</title>
 
   <?php include "include/head.php"; ?>
 </head>

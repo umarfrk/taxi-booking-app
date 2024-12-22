@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>AMNZ City Taxi</title>
+  <title>QuickTrip</title>
 
   <?php include "include/head.php"; ?>
 </head>
@@ -34,7 +34,7 @@
               </h2>
             </div>
             <p style="text-align: justify;">
-              At City Taxi, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
+              At QuickTrip, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@
               </h2>
             </div>
             <p style="text-align: justify;">
-              City Taxi (PVT) Ltd is a leading taxi service provider based in [Your Location]. Our team is passionate about ensuring every journey is comfortable, efficient, and enjoyable. We pride ourselves on our fleet of well-maintained vehicles and professional drivers who prioritize your Safety and Satisfaction.
+              QuickTrip (PVT) Ltd is a leading taxi service provider based in [Your Location]. Our team is passionate about ensuring every journey is comfortable, efficient, and enjoyable. We pride ourselves on our fleet of well-maintained vehicles and professional drivers who prioritize your Safety and Satisfaction.
             </p>
           </div>
         </div>

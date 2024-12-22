@@ -20,7 +20,7 @@ if(isset($_SESSION['userID']) && $_SESSION['userID']!=""){
 <html>
 
 <head>
-  <title>Login - AMNZ City Taxi</title>
+  <title>Login - QuickTrip</title>
 
   <?php include "include/head.php"; ?>
 </head>

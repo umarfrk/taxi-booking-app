@@ -7,11 +7,11 @@
             <div class="info_detail">
               <a href="index.php">
                 <h4>
-                  AMNZ City Taxi
+                  QuickTrip
                 </h4>
               </a>
               <p>
-                City Taxi (PVT) Ltd is a leading taxi service provider based in [Your Location]. Our team is passionate about ensuring every journey is comfortable, efficient, and enjoyable. 
+                QuickTrip (PVT) Ltd is a leading taxi service provider based in [Your Location]. Our team is passionate about ensuring every journey is comfortable, efficient, and enjoyable. 
               </p>
               <div class="social_box">
                 <a href="">
@@ -51,7 +51,7 @@
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  Email : info@amnzcitytaxi.com
+                  Email : info@QuickTrip.com
                 </span>
               </a>
             </div>
@@ -67,7 +67,7 @@
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">AMNZ CityTaxi </a>
+        <a href="https://html.design/">QuickTrip </a>
       </p>
     </div>
   </footer>

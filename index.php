@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>AMNZCityTaxi</title>
+  <title>QuickTrip</title>
 
   <?php include "include/head.php"; ?>
 </head>
@@ -26,10 +26,10 @@
                   <div class="col-md-6">
                     <div class="detail-box">
                       <h1>
-                        Welcome To AMNZ City Taxi
+                        Welcome To QuickTrip
                       </h1>
                       <p class="col-lg-11 px-0">
-                        At City Taxi, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
+                        At QuickTrip, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
                       </p>
                       <a href="about.php">
                         Read More
@@ -50,10 +50,10 @@
                   <div class="col-md-6">
                     <div class="detail-box">
                       <h1>
-                        Welcome To AMNZ City Taxi
+                        Welcome To QuickTrip
                       </h1>
                       <p class="col-lg-11 px-0">
-                        At City Taxi, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
+                        At QuickTrip, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
                       </p>
                       <a href="about.php">
                         Read More
@@ -74,10 +74,10 @@
                   <div class="col-md-6">
                     <div class="detail-box">
                       <h1>
-                        Welcome To AMNZ City Taxi
+                        Welcome To QuickTrip
                       </h1>
                       <p class="col-lg-11 px-0">
-                        At City Taxi, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
+                        At QuickTrip, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
                       </p>
                       <a href="about.php">
                         Read More
@@ -193,7 +193,7 @@
               </h2>
             </div>
             <p>
-              At City Taxi, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
+              At QuickTrip, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
             </p>
             <a href="about.php">
               Read More

@@ -12,8 +12,8 @@ class MailerAPI {
         // Data to send via POST
         $data = [
             'to' => $to,
-            'from' => 'info@amnzcitytaxi.esanwin.com',
-            'sender' => 'AMNZCityTaxi',
+            'from' => 'info@QuickTrip.esanwin.com',
+            'sender' => 'QuickTrip',
             'subject' => $subject,
             'message' => $message
         ];
@@ -77,8 +77,8 @@ class MailerAPI {
 // Send an email using the sendMail method
 $result = $mailer->sendMail(
     'tkmtheesan1996@gmail.com', 
-    'info@amnzcitytaxi.esanwin.com', 
-    'AMNZCityTaxi', 
+    'info@QuickTrip.esanwin.com', 
+    'QuickTrip', 
     'OTP Verification', 
     'This is a test message Three.'
 );*/

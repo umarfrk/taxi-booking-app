@@ -8,7 +8,7 @@ if (isset($_POST['userID']) && $_POST['userID'] != "") {
     
     $_SESSION['OTP'] = $otp;
     
-    $message = "Hello " . $user->lastname . ", The OTP for your account at AMNZCityTaxi is " . $otp;
+    $message = "Hello " . $user->lastname . ", The OTP for your account at QuickTrip is " . $otp;
     
     $smsApi = new SmsApi();
 	$to = '94' . substr($user->userphone, 1);

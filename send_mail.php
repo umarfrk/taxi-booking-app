@@ -19,13 +19,13 @@ try {
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host       = 'smtp.hostinger.com'; //smtp.gmail.com                 // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                             // Enable SMTP authentication
-    $mail->Username   = 'info@amnzcitytaxi.esanwin.com';           // SMTP username (Your email address)
+    $mail->Username   = 'info@QuickTrip.esanwin.com';           // SMTP username (Your email address)
     $mail->Password   = 'info@AMNZ2024';            // SMTP password (Your email password or App-specific password)
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;   // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` for SSL
     $mail->Port       = 465;                              // TCP port to connect to (TLS: 587, SSL: 465)
 
     // Recipients
-    $mail->setFrom('info@amnzcitytaxi.esanwin.com', 'Theesan');  // Set sender email and name
+    $mail->setFrom('info@QuickTrip.esanwin.com', 'Theesan');  // Set sender email and name
     $mail->addAddress('tkmtheesan1996@gmail.com', 'Mohanatheesan'); // Add a recipient
 
     // Content

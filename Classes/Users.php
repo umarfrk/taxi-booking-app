@@ -70,12 +70,12 @@ class Users {
 
 				$mailer = new MailerAPI();
 				$message="
-				<h2>AMNZ City Taxi Login Details</h2>
+				<h2>QuickTrip Login Details</h2>
 				<p>Thank you for registering. Here are your login credentials:</p>
 				<h4>Username: Your Email</h4>
 				<h4>Password: 1234</h4>
 				<p>Please keep your credentials safe and do not share them with anyone.</p>
-				Visit <a href='https://amnzcitytaxi.esanwin.com/login.php?key=".$this->token."'>https://amnzcitytaxi.esanwin.com/login.php?key=".$this->token."</a> to activate the account!";
+				Visit <a href='https://QuickTrip.esanwin.com/login.php?key=".$this->token."'>https://QuickTrip.esanwin.com/login.php?key=".$this->token."</a> to activate the account!";
 				
 				$result = $mailer->sendMail($this->useremail, 'Login Credentials', $message);
 
