@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>123</title>
+	<link rel="icon" type="image/x-icon" href="https://amnzcitytaxi.esanwin.com/images/slider-img.png">
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6NXqjco0YIP_PWjzcpd37aihtPAugAVg&libraries=places,geometry&callback=initMap" async defer></script>
+	<script>
+    
+    let directionsService;
+    let directionsRenderer;
+    
+    function initMap() {
+        // Initialize the map
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 7.8731, lng: 80.7718 }, // Coordinates for Sri Lanka
+            zoom: 8
+        });
+        
+        directionsService = new google.maps.DirectionsService();
+        directionsRenderer = new google.maps.DirectionsRenderer();
+        
+        directionsRenderer.setMap(map);
+        
+        // Initialize autocomplete
+        //pickupAutocomplete = new google.maps.places.Autocomplete(document.getElementById('pickup-location'));
+        //dropoffAutocomplete = new google.maps.places.Autocomplete(document.getElementById('dropoff-location'));
+    }
+    
+    //initMap();
+    </script>
+
+    
+
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmDezClKTkm23mAuJrbM-w1_dFz0KYaP8&libraries=places"></script> -->
+
+</head>
+<body>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <iframe height="430" width="350" src="https://bot.dialogflow.com/e25bf3ae-4470-424c-bf65-4b8c2589747f"></iframe>
+	<!-- <p>Your Location: <span id="location"></span></p> -->
+    <div id="map"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set From and To Points</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Set From and To Points</h3>
+    <input type="text" id="fromAddress" placeholder="From Address" />
+    <input type="text" id="toAddress" placeholder="To Address" />
+    <button onclick="setDirection()">Get Direction</button>
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var fromMarker, toMarker;
+
+        // Fetch coordinates from typed addresses
+        function setDirection() {
+            var fromAddress = document.getElementById('fromAddress').value;
+            var toAddress = document.getElementById('toAddress').value;
+
+            fetch(`https://nominatim.openstreetmap.org/search?q=${fromAddress}&format=json`)
+                .then(response => response.json())
+                .then(data => {
+                    var fromLatLng = [data[0].lat, data[0].lon];
+                    if (fromMarker) {
+                        fromMarker.setLatLng(fromLatLng);
+                    } else {
+                        fromMarker = L.marker(fromLatLng).addTo(map).bindPopup("From").openPopup();
+                    }
+                    map.setView(fromLatLng, 13);
+                });
+
+            fetch(`https://nominatim.openstreetmap.org/search?q=${toAddress}&format=json`)
+                .then(response => response.json())
+                .then(data => {
+                    var toLatLng = [data[0].lat, data[0].lon];
+                    if (toMarker) {
+                        toMarker.setLatLng(toLatLng);
+                    } else {
+                        toMarker = L.marker(toLatLng).addTo(map).bindPopup("To").openPopup();
+                    }
+                    map.setView(toLatLng, 13);
+                });
+        }
+    </script>
+
+</body>
+</html>

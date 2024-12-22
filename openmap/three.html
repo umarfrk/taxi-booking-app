@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Directions</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Get Directions with Distance and Duration</h3>
+    <input type="text" id="fromAddress" placeholder="From Address" />
+    <input type="text" id="toAddress" placeholder="To Address" />
+    <button onclick="getRoute()">Get Route</button>
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var fromMarker, toMarker;
+
+        function getRoute() {
+            var fromAddress = document.getElementById('fromAddress').value;
+            var toAddress = document.getElementById('toAddress').value;
+
+            // Geocode addresses using Nominatim
+            Promise.all([
+                fetch(`https://nominatim.openstreetmap.org/search?q=${fromAddress}&format=json`),
+                fetch(`https://nominatim.openstreetmap.org/search?q=${toAddress}&format=json`)
+            ])
+            .then(responses => Promise.all(responses.map(res => res.json())))
+            .then(data => {
+                var fromLatLng = [data[0][0].lat, data[0][0].lon];
+                var toLatLng = [data[1][0].lat, data[1][0].lon];
+
+                if (fromMarker) {
+                    fromMarker.setLatLng(fromLatLng);
+                } else {
+                    fromMarker = L.marker(fromLatLng).addTo(map).bindPopup("From").openPopup();
+                }
+
+                if (toMarker) {
+                    toMarker.setLatLng(toLatLng);
+                } else {
+                    toMarker = L.marker(toLatLng).addTo(map).bindPopup("To").openPopup();
+                }
+
+                // Fetch route from OpenRouteService API (ORS)
+                fetch(`https://api.openrouteservice.org/v2/directions/driving-car?api_key=YOUR_API_KEY&start=${fromLatLng[1]},${fromLatLng[0]}&end=${toLatLng[1]},${toLatLng[0]}`)
+                    .then(response => response.json())
+                    .then(routeData => {
+                        var route = routeData.routes[0].geometry;
+                        var distance = routeData.routes[0].summary.distance / 1000; // in km
+                        var duration = routeData.routes[0].summary.duration / 60; // in minutes
+
+                        var routeLine = L.polyline(route.coordinates.map(coord => [coord[1], coord[0]])).addTo(map);
+                        map.fitBounds(routeLine.getBounds());
+
+                        alert(`Distance: ${distance} km\nDuration: ${duration} minutes`);
+                    });
+            });
+        }
+    </script>
+
+</body>
+</html>
