@@ -1,4 +1,4 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmDezClKTkm23mAuJrbM-w1_dFz0KYaP8&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6NXqjco0YIP_PWjzcpd37aihtPAugAVg&libraries=places,geometry&callback=initMap" async defer></script>
 
 <!-- 3. Fetching Current Location -->
 <script>
