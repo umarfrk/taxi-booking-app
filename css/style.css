@@ -1,3 +1,4 @@
+
 body {
   font-family: "Poppins", sans-serif;
   color: #040000;
@@ -60,7 +61,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #1b1f71;
+  background-color: #ffffff;
 }
 
 .sub_page .hero_area {
@@ -203,7 +204,7 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: 40px 0 180px 0;
-  color: #ffffff;
+  color: #000000;
 }
 
 .slider_section .box {
@@ -261,7 +262,7 @@ a:focus {
   top: 50%;
   border-radius: 5px;
   font-size: 28px;
-  color: #1b1f71;
+  color: #000000;
 }
 
 .slider_section .carousel-control-prev:hover,
@@ -307,7 +308,7 @@ a:focus {
 }
 
 .book_section .book_form .input-group-text {
-  background-color: #1b1f71;
+  background-color: #000000;
   width: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,15 +371,15 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 8px 30px;
-  background-color: #1b1f71;
-  border: 1px solid #1b1f71;
+  background-color: #000000;
+  border: 1px solid #000000;
   color: #ffffff;
   border-radius: 5px;
 }
 
 .about_section .detail-box a:hover {
   background-color: transparent;
-  color: #1b1f71;
+  color: #000000;
 }
 
 .about_section .img-box img {
@@ -400,7 +401,7 @@ a:focus {
   margin: 0 auto;
   margin-top: 90px;
   padding: 25px 25px 45px 25px;
-  background: #1b1f71;
+  background: #000000;
   color: #ffffff;
 }
 
@@ -441,7 +442,7 @@ a:focus {
 }
 
 .app_section {
-  background-color: #1b1f71;
+  background-color: #000000;
 }
 
 .app_section .row {
@@ -573,7 +574,7 @@ a:focus {
 }
 
 .blog_section .box .detail-box .blog_date {
-  color: #1b1f71;
+  color: #000000;
   font-weight: 600;
 }
 
@@ -600,7 +601,7 @@ a:focus {
 }
 
 .info_section {
-  background-color: #1b1f71;
+  background-color: #000000;
   color: #ffffff;
   padding-top: 45px;
   padding-bottom: 10px;
@@ -716,7 +717,7 @@ a:focus {
 .footer_section {
   position: relative;
   text-align: center;
-  background-color: #1b1f71;
+  background-color: #000000;
 }
 
 .footer_section p {
@@ -730,3 +731,39 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+.btn-white {
+  background-color: white !important; /* White background */
+  color: black !important; /* Black text */
+  border: 1px solid black !important; /* Black border */
+  border-radius: 5px !important; /* Slightly rounded corners */
+  padding: 8px 16px !important; /* Padding for the button */
+  text-transform: uppercase !important; /* Optional: Makes text uppercase */
+  font-size: 14px !important; /* Adjusts the font size */
+  transition: background-color 0.3s ease !important, color 0.3s ease !important; /* Smooth hover effects */
+}
+
+.btn-white:hover {
+  background-color: gray !important; /* Gray background on hover */
+  color: white !important; /* White text on hover */
+  border-color: gray !important; /* Change border color to match background */
+}
+
+.btn-dark {
+  background-color: black !important; /* Black background */
+  color: white !important; /* White text */
+  border: 1px solid black !important; /* Black border */
+  border-radius: 5px !important; /* Slightly rounded corners */
+  padding: 8px 16px !important; /* Padding for the button */
+  text-transform: uppercase !important; /* Optional: Makes text uppercase */
+  font-size: 14px !important; /* Adjusts the font size */
+  transition: background-color 0.3s ease !important, color 0.3s ease !important; /* Smooth hover effects */
+}
+
+.btn-dark:hover {
+  background-color: white !important; /* White background on hover */
+  color: black !important; /* Black text on hover */
+  border-color: black !important; /* Change border color to match text */
+}
+
+

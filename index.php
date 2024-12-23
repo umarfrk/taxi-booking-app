@@ -16,9 +16,9 @@
 
 
     <!-- slider section -->
-    <section class=" slider_section position-relative">
+    <section class="slider_section position-relative">
       <div class="box">
-        <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="container">
@@ -26,13 +26,13 @@
                   <div class="col-md-6">
                     <div class="detail-box">
                       <h1>
-                        Welcome To QuickTrip
+                        Who We Are
                       </h1>
                       <p class="col-lg-11 px-0">
-                        At QuickTrip, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
+                        QuickTrip (PVT) Ltd is a leading taxi service provider based in Colombo, Sri Lanka. Our team is passionate about ensuring every journey is comfortable, efficient, and enjoyable. We pride ourselves on our fleet of well-maintained vehicles and professional drivers who prioritize your safety and satisfaction.
                       </p>
-                      <a href="about.php">
-                        Read More
+                      <a href="about.php" class="btn-dark">
+                        Learn More
                       </a>
                     </div>
                   </div>
@@ -44,19 +44,19 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item ">
+            <div class="carousel-item">
               <div class="container">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="detail-box">
                       <h1>
-                        Welcome To QuickTrip
+                        Our Vision
                       </h1>
                       <p class="col-lg-11 px-0">
-                        At QuickTrip, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
+                        At QuickTrip, our vision is to revolutionize travel by offering innovative, safe, and reliable transportation solutions. We aim to enhance every journey through top-notch service and cutting-edge technology.
                       </p>
-                      <a href="about.php">
-                        Read More
+                      <a href="about.php" class="btn-dark">
+                        Discover More
                       </a>
                     </div>
                   </div>
@@ -68,19 +68,19 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item ">
+            <div class="carousel-item">
               <div class="container">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="detail-box">
                       <h1>
-                        Welcome To QuickTrip
+                        Why Choose Us
                       </h1>
                       <p class="col-lg-11 px-0">
-                        At QuickTrip, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
+                        We prioritize your convenience and safety with a fleet of well-maintained vehicles, professional drivers, and 24/7 service availability. QuickTrip is committed to making your travels stress-free and enjoyable.
                       </p>
-                      <a href="about.php">
-                        Read More
+                      <a href="about.php" class="btn-dark">
+                        Find Out More
                       </a>
                     </div>
                   </div>
@@ -108,6 +108,7 @@
         </div>
       </div>
     </section>
+
     <!-- end slider section -->
   </div>
 
@@ -163,7 +164,7 @@
               </div>
             </div>
             <div class="btn-box">
-              <button type="submit" class="">Book Now</button>
+              <button type="submit" class="btn-dark">Book Now</button>
             </div>
           </form>
         </div>
@@ -189,14 +190,14 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                About Us
+                Our Vision
               </h2>
             </div>
             <p>
-              At QuickTrip, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
+              At QuickTrip, our vision is to revolutionize transportation by offering seamless and sustainable travel experiences. We aim to integrate advanced technology, eco-friendly practices, and unmatched customer service to meet the evolving needs of modern travelers.
             </p>
-            <a href="about.php">
-              Read More
+            <a href="about.php" class="btn-dark">
+              Learn More
             </a>
           </div>
         </div>
@@ -204,74 +205,69 @@
     </div>
   </section>
 
+
   <!-- end about section -->
 
   <!-- why section -->
 
   <section class="why_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Why Choose Us
-        </h2>
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Why QuickTrip Stands Out
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="box b1">
+          <div class="img-box">
+            <img src="images/w1.png" alt="Fast Booking" />
+          </div>
+          <div class="detail-box">
+            <h5>
+              Effortless Booking Experience
+            </h5>
+            <p>
+              With our simple and intuitive booking system, you can easily book a ride in just a few clicks, ensuring a quick and seamless experience every time.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="why_container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="box b1">
-              <div class="img-box">
-                <img src="images/w1.png" alt="" class="" />
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Fast & Easy Booking
-                </h5>
-                <p style="display: none;">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its It is a
-                  long established fact that a reader
-                </p>
-              </div>
-            </div>
+      <div class="col-md-4">
+        <div class="box b2">
+          <div class="img-box">
+            <img src="images/w2.png" alt="Driving Safety" />
           </div>
-          <div class="col-md-4">
-            <div class="box b2">
-              <div class="img-box">
-                <img src="images/w2.png" alt="" class="" />
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Driving safety
-                </h5>
-                <p style="display: none;">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its It is a
-                  long established fact that a reader
-                </p>
-              </div>
-            </div>
+          <div class="detail-box">
+            <h5>
+              Prioritizing Your Safety
+            </h5>
+            <p>
+              Your safety is our top priority. Our professional drivers undergo rigorous training and adhere to strict safety standards to ensure a secure journey.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="box b3">
-              <div class="img-box">
-                <img src="images/w3.png" alt="" class="" />
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Full Satisfaction
-                </h5>
-                <p style="display: none;">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its It is a
-                  long established fact that a reader
-                </p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box b3">
+          <div class="img-box">
+            <img src="images/w3.png" alt="Full Satisfaction" />
+          </div>
+          <div class="detail-box">
+            <h5>
+              Unmatched Customer Satisfaction
+            </h5>
+            <p>
+              We strive for excellence in every ride. Our goal is to exceed your expectations by providing top-notch service, reliable rides, and customer satisfaction.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- end why section -->
 
