@@ -104,12 +104,12 @@ if (isset($_GET['code'])) {
 
             <div class="form-group">
               <label for="pickup-location">From</label>
-              <input type="text" name="pickup-location" id="pickup-location" class="form-control">
+              <input type="text" name="pickup-location" id="pickup-location" class="form-control" required>
             </div>
 
             <div class="form-group">
               <label for="dropoff-location">To</label>
-              <input type="text" name="dropoff-location" id="dropoff-location" class="form-control">
+              <input type="text" name="dropoff-location" id="dropoff-location" class="form-control" required>
             </div>
 
             <div class="form-group">
@@ -132,7 +132,7 @@ if (isset($_GET['code'])) {
                 <option value="Card">Card</option>
               </select>
               <input type="text" id="selected-cardID" name="cardID" class="form-control" placeholder="Enter Card ID (if paying by card)" style="display:none;">
-              <input type="hidden" name="distance" id="distance">
+              <input type="hidden" value="" name="distance" id="distance">
             </div>
 
             <div class="form-group">

@@ -26,7 +26,7 @@
 	require "Classes/MailerAPI.php";
 	require "Classes/SmsAPI.php";
 
-	$mapApiKey = "AIzaSyBmDezClKTkm23mAuJrbM-w1_dFz0KYaP8";
+	$mapApiKey = "AIzaSyAqWRqLUwGDmDJBlxuVg6qImpxYl0mpnWc";
 
 	// Include PHPMailer classes
 	use PHPMailer\PHPMailer\PHPMailer;
