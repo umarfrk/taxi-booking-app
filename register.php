@@ -283,9 +283,9 @@
 
 <script>
   $(document).ready(function() {
-    $("#btnRegister").on("click", function() {
-      $("#frmRegisterD").submit();
-    });
+    // $("#btnRegister").on("click", function() {
+    //   $("#frmRegisterD").submit();
+    // });
 
 
     function getCurrentLocation() {

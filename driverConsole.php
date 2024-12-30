@@ -147,7 +147,8 @@ if(!isset($_SESSION['userID']) || $_SESSION['type']!="2"){
         <div class="col-md-6 col-right">
           <?php
           $row = $rating->rateCal($driver->driverID);
-          $score = $row['scoreSum'] / $row['scoreCount'];
+          // $score = $row['scoreSum'] / $row['scoreCount'];
+          $score = ($row['scoreCount'] != 0) ? $row['scoreSum'] / $row['scoreCount'] : 0;
           ?>
           <span class="heading">User Rating</span>
           <?php

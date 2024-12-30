@@ -22,35 +22,62 @@ class Drivers{
 		$this->con = $database->con;
 	}
 
-	public function registerDriver($data, $userID){
-		$this->userID = htmlspecialchars($userID);
-		$this->licenseNo = htmlspecialchars($data['licenseNo']);
-		$this->licenseExpireDate = htmlspecialchars($data['licenseExpireDate']);
-		$this->vehicleType = htmlspecialchars($data['vehicleType']);
-		$this->vehicleModel = htmlspecialchars($data['vehicleModel']);
-		$this->vehicleCapacity = htmlspecialchars($data['vehicleCapacity']);
-		$this->vehicleNo = htmlspecialchars($data['vehicleNo']);
+	public function registerDriver($data, $userID)
+	{
+		// Sanitize and assign values
+		$this->userID = $userID;
+		$this->licenseNo = $data['licenseNo'];
+		$this->licenseExpireDate = $data['licenseExpireDate'];
+		$this->vehicleType = $data['vehicleType'];
+		$this->vehicleModel = $data['vehicleModel'];
+		$this->vehicleCapacity = $data['vehicleCapacity'];
+		$this->vehicleNo = $data['vehicleNo'];
 		$this->status = "Offline";
-		$this->currentLocation = htmlspecialchars($data['currentLat'].",".$data['currentLng']);
+		$this->currentLocation = $data['currentLat'] . "," . $data['currentLng'];
 		$this->updatedTime = date("Y-m-d H:i:s");
 		$this->active = '1';
-
-		$sql = "INSERT INTO $this->table VALUES (null, '$this->userID', '$this->licenseNo', '$this->licenseExpireDate', '$this->vehicleType', '$this->vehicleModel', '$this->vehicleCapacity', '$this->vehicleNo', '$this->status', '$this->currentLocation', '$this->updatedTime', '$this->active')";
-		$exe = $this->con->query($sql);
-		if($exe){
-			?>
-			<!-- <div class="alert alert-success" role="alert">
-				<h5 style="text-align: center;"><b>Registered Driver Successful!</b></h5>
-			</div> -->
-			<?php
-		}else{
-			?>
-			<div class="alert alert-warning" role="alert">
-				<h5 style="text-align: center;"><?php echo $this->con->error; ?></h5>
-			</div>
-			<?php
+	
+		// Use a prepared statement to avoid SQL injection
+		$stmt = $this->con->prepare("INSERT INTO $this->table 
+			(userID, licenseNo, licenseExpireDate, vehicleType, vehicleModel, vehicleCapacity, vehicleNo, status, currentLocation, updatedTime, active) 
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		
+		if (!$stmt) {
+			echo "Failed to prepare statement: " . $this->con->error;
+			return;
 		}
+	
+		// Bind parameters
+		$stmt->bind_param(
+			"issssisssss",
+			$this->userID,
+			$this->licenseNo,
+			$this->licenseExpireDate,
+			$this->vehicleType,
+			$this->vehicleModel,
+			$this->vehicleCapacity,
+			$this->vehicleNo,
+			$this->status,
+			$this->currentLocation,
+			$this->updatedTime,
+			$this->active
+		);
+	
+		// Execute query and handle result
+		if ($stmt->execute()) {
+			echo "<div class='alert alert-success' role='alert'>
+					<h5 style='text-align: center;'><b>Registered Driver Successfully!</b></h5>
+				  </div>";
+		} else {
+			echo "<div class='alert alert-warning' role='alert'>
+					<h5 style='text-align: center;'>Error: " . $stmt->error . "</h5>
+				  </div>";
+		}
+	
+		// Close the statement
+		$stmt->close();
 	}
+	
 
 	public function getDriverByUser($userID){
 		$sql = "SELECT * FROM $this->table where userID = '$userID' and active = '1'";
