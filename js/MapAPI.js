@@ -228,6 +228,7 @@ function calculateRoute(pickupLat, pickupLng, dropoffLocation) {
             // Calculate the distance and display it
             TripDistanceInKm = result.routes[0].legs[0].distance.text;
             $('#distance').text("Distance: " + TripDistanceInKm);
+            $('#distance').val(TripDistanceInKm);
             //$('#distance').text(TripDistanceInKm);
 
             Fee = 100*parseFloat(TripDistanceInKm);
