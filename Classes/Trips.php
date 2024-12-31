@@ -37,17 +37,22 @@ class Trips{
 	}
 
 	public function checkTripsByDriverID($driverID){
-		$sql = "SELECT * from $this->table where driverID = '$driverID' and status = 'Waiting' and active = '1'";
+		// $sql = "SELECT * from $this->table where driverID = '$driverID' and status = 'Waiting' and active = '1'";
+		$sql = "SELECT trips.*,users.token FROM trips JOIN drivers ON trips.driverID = drivers.driverID JOIN users ON drivers.userID = users.userID
+				WHERE trips.driverID = '$driverID' AND trips.status = 'Waiting' AND trips.active = '1';";
+				
+		// print_r($sql);
 		$exe = $this->con->query($sql);
 		if(mysqli_num_rows($exe)>0){
 			$row = $exe->fetch_assoc();
+			// print_r($row);
 			$this->tripID = $row['tripID'];
 			$this->reservationID = $row['reservationID'];
 			$this->driverID = $row['driverID'];
 			$this->status = $row['status'];
 			$this->arrivedTime = $row['arrivedTime'];
-			$this->pickupTime = $row['pickupTime'];
-			$this->dropoffTime = $row['dropoffTime'];
+			$this->pickupTime = $row['pickedupTime'];
+			$this->dropoffTime = $row['dropedoffTime'];
 			$this->amount = $row['amount'];
 			$this->note = $row['note'];
 			$this->token = $row['token'];
@@ -109,6 +114,7 @@ class Trips{
 		$this->token = $this->con->real_escape_string($data['token']);
 
 		$sql = "UPDATE $this->table SET status = 'Accepted' where tripID = '$this->tripID' and reservationID = '$this->reservationID' and driverID = '$this->driverID' and note = '$this->note' and token = '$this->token'";
+		// print_r($sql);
 		$exe = $this->con->query($sql);
 		if($exe){
 			$Reservation = new Reservation();

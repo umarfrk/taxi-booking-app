@@ -7,9 +7,9 @@ if(
 	isset($_POST['longitude']) && $_POST['longitude']!="" && 
 	isset($_POST['type']) && $_POST['type']!=""
 ){
-
 	$latitude = htmlspecialchars($_POST['latitude']);
 	$longitude = htmlspecialchars($_POST['longitude']);
+	
 	
 	if($_POST['type'] == "Driver"){
 		//Driver
@@ -80,6 +80,7 @@ if(
 	isset($_POST['ref']) && $_POST['ref']=="checkRequestByDriver" &&
 	isset($_POST['driverID']) && $_POST['driverID']!=""
 ){
+
 	$Trips = new Trips();
 	$res = $Trips->checkTripsByDriverID($_POST['driverID']);
 	if($res){

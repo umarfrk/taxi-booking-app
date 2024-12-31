@@ -127,7 +127,7 @@ if (isset($_GET['code'])) {
             </div>
 
             <div class="form-group">
-              <select id="selected-payment-method" name="paymentMethod" class="form-control" style="display:none;">
+              <select id="selected-payment-method" name="paymentMethod" class="form-control">
                 <option value="Cash">Cash</option>
                 <option value="Card">Card</option>
               </select>
